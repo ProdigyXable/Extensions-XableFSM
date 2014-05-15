@@ -3299,7 +3299,7 @@ typedef rAni*	LPRA;
 // ----------------------------------------
 typedef struct tagRSPR {
 
-	int	 		rsFlash;				// Flash objets
+	int	 		rsFlash;				// Flash objects
 	int	 		rsFlashCpt;
 	int	   		rsLayer;				// Layer
 	int			rsZOrder;				// Z-order value
