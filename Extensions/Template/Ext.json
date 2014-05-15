@@ -1,0 +1,216 @@
+{
+    "About": {
+        "Name": "Xable Finite State Machine",
+        "Author": "Samuel Benton",
+        "Copyright": "Copyright (C) 2014 Xable Enterprises",
+        "Comment": "To be added",
+        "URL": "",
+        "Help": "http://www.xable.us",
+        "Identifier": "XFSM"
+    },
+
+    "ActionMenu": 
+	[
+		[0, "Add State"],
+		[1, "Remove State via Name"],
+		[2, "Remove State via Key"],
+
+		["State Transition",
+			[3, "Transition to State via key"],
+			[4, "Transition to State via name"],
+		],
+
+		["State Properties",
+			[5, "Change Output Properties via Key"],
+			[6, "Change Output Properties via Name"],
+		],
+	],
+
+    "ConditionMenu":
+	[
+		[0,"New State Added"],
+		[1,"Transition Occurred"],
+		[2,"Last State via Key"],
+		[3,"Last State via Name"],
+		[4,"Is Current State a Signal State?"],
+		"Separator",
+		[5, "State Removed"],
+		"Separator",
+		["Errors",
+			[6, "Error: State Not Found"],
+			[7, "Error: Too Few States"],
+			[8, "Error: No States"],
+			[9, "State Has No Signal"],
+		],
+	],
+
+
+    "ExpressionMenu":
+	[
+		[0, "State Count"],
+
+		["State IDs",
+			[1, "Name from Key"],
+			[2, "Key from Name"],
+		],
+
+		["Current State Expressions",
+			[3, "Key of Current State"],
+			[4, "Name of Current State"],
+
+			["Message Outputs",
+				[5, "Numerical Output"],
+				[6, "Message Output"],
+			],
+		],
+
+		
+	],
+
+    "Actions": 
+	[
+        {"Title": "Add state %0 with key %1",
+			"Parameters":
+			[
+				["Text", "State Name"],				
+				["Float", "State Key"],
+				["Integer", "Signaling State"],
+				["Float", "Output Number"],
+				["Text", "Output Message"],
+			]
+        },
+		{"Title": "Remove State %0",
+			"Parameters":
+			[
+				["Text", "State Name"],
+			],
+		},
+		{"Title": "Remove State with key %0",
+			"Parameters":
+			[
+				["Float", "State Key"],
+			],
+		},
+		{"Title": "Transition to State with key %0",
+			"Parameters":
+			[
+				["Float", "State key"],
+			],
+		},
+		{"Title": "Transition to State  %0",
+			"Parameters":
+			[
+				["Text", "State Name"],
+			],
+		},
+		{"Title": "Change Output Properties of State with key %0",
+			"Parameters":
+			[
+				["Float", "State Key"],
+				["Integer", "Output Flag"],
+				["Float", "Output Number"],
+				["Text", "Output Message"],
+			],
+		},
+		{"Title": "Change Output Properties of State with name %0",
+			"Parameters":
+			[
+				["Text", "State Name"],
+				["Integer", "Output Flag"],
+				["Float", "Output Number"],
+				["Text", "Output Message"],
+			],
+		},
+    ],
+
+    "Conditions":
+	[
+		{
+			"Title": "%o : New Stated Added?",
+            "Triggered": true
+        },
+		 {
+			"Title": "%o : On Transition",
+            "Triggered": true
+        },
+		 {
+			"Title": "%o : Last State had key %0",
+            "Parameters":
+			[
+				["Float","State Key"],
+            ],
+            "Triggered": false
+        },
+		{
+			"Title": "%o : Last State had name %0",
+            "Parameters":
+			[
+				["Text","State Name"],
+            ],
+            "Triggered": false
+        },
+		{
+			"Title": "%o : Does the current state signal?",
+            "Triggered": false
+        },
+		{
+			"Title": "%o : State has been removed",
+            "Triggered": true
+        },
+		{
+			"Title": "%o : Error: Specified State Not Found",
+            "Triggered": true
+        },
+		{
+			"Title": "%o : Error: Too Few States",
+            "Triggered": true
+        },
+		{
+			"Title": "%o : Error: No States Available",
+            "Triggered": true
+        },
+		{
+			"Title": "%o : Error: States produces no signal",
+            "Triggered": true
+        },
+	],
+ 
+    "Expressions": 
+	[
+		{	"Title": "StateCount(",
+			"Returns": "Integer",
+		},
+
+		{	"Title": "NameFromKey(",
+			"Returns": "Text",
+			"Parameters":
+			[
+				["Float", "State Key"],
+			]
+		},
+
+		{	"Title": "KeyFromName(",
+			"Returns": "Float",
+			"Parameters":
+			[
+				["Text", "State Name"],
+			]
+		},
+
+		{	"Title": "CurrentStateKey(",
+			"Returns": "Float",
+		},
+
+		{	"Title": "CurrentStateName(",
+			"Returns": "Text",
+		},
+		{	"Title": "CurrentStateOutputK(",
+			"Returns": "Float",
+		},
+
+		{	"Title": "CurrentStateOutputN(",
+			"Returns": "Text",
+		},
+		
+	],
+}
