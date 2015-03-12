@@ -257,7 +257,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -308,7 +308,7 @@
     </Bscmake>
     <PostBuildEvent>
       <Message>Installing MMF2 Files</Message>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Runtime|Win32'">
@@ -360,7 +360,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -410,7 +410,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -463,7 +463,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -516,7 +516,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -566,7 +566,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -619,7 +619,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -672,7 +672,7 @@
       <OutputFile>$(IntDir)Template.bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>..\AutoInstall.bat $(ProjectDir)MFX</Command>
+      <Command>..\AutoInstall.bat "$(ProjectDir)MFX"</Command>
       <Message>Installing MMF2 Files</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
